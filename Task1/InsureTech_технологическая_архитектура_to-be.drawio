@@ -1,0 +1,121 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="InureTech_технологическая архитектура_to-be" id="insuretech-to-be">
+    <mxGraphModel dx="1188" dy="1501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="u1" value="Пользователь (браузер)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4d4d4d;" parent="1" vertex="1">
+          <mxGeometry x="490" y="-290" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" value="GeoDNS&#xa;(TTL 30–60s, failover)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3ebff;strokeColor=#5282ff;" parent="1" vertex="1">
+          <mxGeometry x="490" y="-210" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="CDN&#xa;(статика + edge cache)&#xa;единое время загрузки страниц" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3ebff;strokeColor=#5282ff;" parent="1" vertex="1">
+          <mxGeometry x="460" y="-130" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="waf" value="WAF / DDoS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="500" y="-40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;" parent="1" source="u1" target="dns" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;" parent="1" source="dns" target="cdn" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;" parent="1" source="cdn" target="waf" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;" parent="1" source="waf" target="alb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iaiuSw_OgUbSg0fSpdTv-2" value="InsureTech" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="35" width="1130" height="795" as="geometry" />
+        </mxCell>
+        <mxCell id="aza" value="Зона доступности A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;verticalAlign=top;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="20" y="185" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="k8sa" value="Kubernetes cluster A (независимый)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3ebff;strokeColor=#5282ff;verticalAlign=top;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="40" y="215" width="460" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="inga" value="Ingress A&#xa;Readiness/Liveness probes" style="rounded=1;html=1;fillColor=#ffffff;strokeColor=#5282ff;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="170" y="245" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="svca" value="Сервисы InsureTech&#xa;core-app, client-info,&#xa;ins-product-aggregator,&#xa;ins-comp-settlement&#xa;HPA + PDB" style="rounded=1;html=1;fillColor=#ffffff;strokeColor=#5282ff;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="170" y="315" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="azb" value="Зона доступности B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;verticalAlign=top;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="610" y="185" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="k8sb" value="Kubernetes cluster B (независимый)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3ebff;strokeColor=#5282ff;verticalAlign=top;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="630" y="215" width="460" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ingb" value="Ingress B&#xa;Readiness/Liveness probes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5282ff;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="750" y="255" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="svcb" value="Сервисы InsureTech&#xa;core-app, client-info,&#xa;ins-product-aggregator,&#xa;ins-comp-settlement&#xa;HPA + PDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5282ff;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="750" y="325" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="Managed PostgreSQL cluster&#xa;Auto-failover + PITR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="370" y="485" width="390" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="dbp" value="Primary (AZ A)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="390" y="530" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbr" value="Replica (AZ B)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="390" y="625" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bkp" value="Backups / Object Storage&#xa;интервал ≤ 15 мин (RPO)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="620" y="530" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="inga" target="svca" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="endArrow=block;html=1;rounded=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="ingb" target="svcb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="TCP 5432" style="endArrow=block;html=1;rounded=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="svca" target="dbp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="TCP 5432" style="endArrow=block;html=1;rounded=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="svcb" target="dbp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;replication&lt;/span&gt;" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=none;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="dbp" target="dbr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" style="endArrow=block;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="svca" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="735" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="245" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" style="endArrow=block;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="svcb" target="obs" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="745" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="835" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alb" value="L7 Application Load Balancer&#xa;Health check: /healthz" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="445" y="35" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="Почему 2 независимых кластера (а не “растянутый”):&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- меньше blast-radius&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- обновления/восстановление по AZ независимо&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- проще пережить outage AZ&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="65" y="75" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="active-active&#xa;HC /healthz" style="endArrow=block;html=1;rounded=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="alb" target="inga" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="active-active&#xa;HC /healthz" style="endArrow=block;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="iaiuSw_OgUbSg0fSpdTv-2" source="alb" target="ingb" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obs" value="Мониторинг/алертинг + Логи&#xa;SLO 99.9% (24/7)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="iaiuSw_OgUbSg0fSpdTv-2" vertex="1">
+          <mxGeometry x="467.5" y="705" width="200" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
