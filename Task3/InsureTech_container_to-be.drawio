@@ -1,0 +1,124 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="InsureTech_container_to-be" id="insuretech-container-to-be">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client" value="Клиент&#xa;[Person]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4d4d4d;" parent="1" vertex="1">
+          <mxGeometry x="455" y="10" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="partners" value="Системы партнёров&#xa;[Software System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="10" y="260" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" value="Платёжный сервис&#xa;[Software System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="10" y="120" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="insurers" value="Системы страховых компаний&lt;br&gt;[Software System]&lt;br&gt;(10 компаний = 5 текущих +5 новых)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="330" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="InsureTech&#xa;[Software System]" style="swimlane;whiteSpace=wrap;html=1;rounded=0;strokeColor=#999999;fillColor=none;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="240" y="90" width="720" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="web" value="InsureTech Web&#xa;[Container: JavaScript, React]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="boundary" vertex="1">
+          <mxGeometry x="170" y="45" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="core" value="core-app&#xa;[Container: Kotlin, SpringBoot]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="30" y="150" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="clientInfo" value="client-info&#xa;[Container: Kotlin, SpringBoot]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="450" y="150" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aggregator" value="ins-product-aggregator&#xa;[Container: Kotlin, SpringBoot]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="330" y="240" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="settlement" value="ins-comp-settlement&#xa;[Container: Kotlin, SpringBoot]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="470" y="350" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="coredb" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;core-db&lt;br&gt;[Container: PostgreSQL]" style="shape=mxgraph.flowchart.database;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="60" y="260" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="clientdb" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;client-info-db&lt;br&gt;[Container: PostgreSQL]" style="shape=mxgraph.flowchart.database;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=middle;" parent="boundary" vertex="1">
+          <mxGeometry x="480" y="40" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="settdb" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;ins-comp-settlement-db&lt;br&gt;[Container: PostgreSQL]" style="shape=mxgraph.flowchart.database;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;" parent="boundary" vertex="1">
+          <mxGeometry x="500" y="470" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" value="Event Streaming Platform&lt;br&gt;Kafka / Managed Kafka&lt;br&gt;&lt;b&gt;topics&lt;/b&gt;:&amp;nbsp;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;product_catalog.updated,&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;i&gt;policy.issued&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="boundary" vertex="1">
+          <mxGeometry x="30" y="450" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="outboxNote" value="Transactional Outbox&#xa;(таблица outbox + publisher/CDC)&#xa;для core-app и ins-product-aggregator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="boundary" vertex="1">
+          <mxGeometry x="30" y="580" width="550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="produce:&amp;nbsp;&lt;div&gt;policy.issued&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;entryX=0.011;entryY=0.052;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.028;exitY=1.01;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" parent="boundary" source="core" target="kafka" edge="1">
+          <mxGeometry x="0.36" y="10" relative="1" as="geometry">
+            <mxPoint x="70" y="220" as="sourcePoint" />
+            <mxPoint x="70" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="33" y="221" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="consume:&amp;nbsp;&lt;div&gt;policy.issued&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;exitX=0.991;exitY=0.331;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="boundary" source="kafka" target="settlement" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="129" y="482.97000000000025" as="sourcePoint" />
+            <mxPoint x="450" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" value="HTTPS" style="endArrow=block;html=1;rounded=0;" parent="1" source="client" target="web" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="REST" style="endArrow=block;html=1;rounded=0;" parent="1" source="web" target="core" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="REST" style="endArrow=block;html=1;rounded=0;" parent="1" source="web" target="clientInfo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="HTTP" style="endArrow=block;html=1;rounded=0;" parent="1" source="core" target="payment" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="REST API" style="endArrow=block;html=1;rounded=0;" parent="1" source="partners" target="core" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="TCP" style="endArrow=block;html=1;rounded=0;" parent="1" source="core" target="coredb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="TCP" style="endArrow=block;html=1;rounded=0;" parent="1" source="clientInfo" target="clientdb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="TCP" style="endArrow=block;html=1;rounded=0;" parent="1" source="settlement" target="settdb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="REST/SOAP (fan-out)&#xa;таймауты/ретраи/лимиты" style="endArrow=block;html=1;rounded=0;" parent="1" source="aggregator" target="insurers" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="REST (on-demand quotes)&#xa;например ОСАГО" style="endArrow=block;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="core" target="aggregator" edge="1">
+          <mxGeometry x="0.6418" y="-22" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="produce:&amp;nbsp;&lt;div&gt;product_catalog.updated&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;" parent="1" source="aggregator" target="kafka" edge="1">
+          <mxGeometry x="0.2492" y="11" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="consume:&amp;nbsp;&lt;div&gt;product_catalog.updated&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="kafka" target="core" edge="1">
+          <mxGeometry x="-0.3043" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="consume:&amp;nbsp;&lt;div&gt;product_catalog.updated&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="kafka" target="settlement" edge="1">
+          <mxGeometry x="-0.0444" y="-2" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="595" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note1" value="To-be: убираем polling продуктов/тарифов и ежедневный REST core→settlement.&#xa;Каталог и оформленные страховки доставляются событиями через Kafka." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="325" y="720" width="550" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
