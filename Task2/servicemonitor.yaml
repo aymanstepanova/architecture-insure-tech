@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: scaletestapp
+  labels:
+    # Важно: метка release должна совпадать с именем Helm-релиза kube-prometheus-stack
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: scaletestapp
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+

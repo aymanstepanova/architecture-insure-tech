@@ -1,0 +1,28 @@
+## Values для prometheus-community/prometheus-adapter
+##
+## Установка (PowerShell):
+## helm install prom-adapter prometheus-community/prometheus-adapter -n monitoring -f .\Task2\prometheus-adapter-values.yaml
+##
+
+prometheus:
+  url: http://monitoring-kube-prometheus-prometheus.monitoring.svc
+  port: 9090
+
+rules:
+  default: false
+  # Делаем POD custom metric (custom.metrics.k8s.io), чтобы HPA type: Pods её видел.
+  # Метрика: http_requests_per_second = sum(rate(http_requests_total[1m])) по pod.
+  custom:
+    - seriesQuery: 'http_requests_total{namespace!="",pod!=""}'
+      resources:
+        overrides:
+          namespace:
+            resource: namespace
+          pod:
+            resource: pod
+      name:
+        matches: "^http_requests_total$"
+        as: "http_requests_per_second"
+      metricsQuery: 'sum(rate(http_requests_total{<<.LabelMatchers>>}[1m])) by (<<.GroupBy>>)'
+  external: []
+
