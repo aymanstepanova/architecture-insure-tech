@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram name="InsureTech_container_to-be_Task4_OSAGO" id="insuretech-container-to-be-task4">
-    <mxGraphModel dx="2784" dy="2534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="2015" dy="2081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -87,6 +87,42 @@
             <mxPoint x="170" y="120.00000000000023" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-2" value="" style="group" vertex="1" connectable="0" parent="boundary">
+          <mxGeometry x="340" y="40" width="75" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="patCore2" value="TimeOut" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-2" vertex="1">
+          <mxGeometry width="75" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-1" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=deploy" vertex="1" parent="VWkAz9IPMXAgrAkri_9B-2">
+          <mxGeometry y="4" width="16.84" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-4" value="" style="group" vertex="1" connectable="0" parent="boundary">
+          <mxGeometry x="420" y="40" width="85" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="patCore1" value="Rate Limiter" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-4" vertex="1">
+          <mxGeometry width="85" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-3" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=job" vertex="1" parent="VWkAz9IPMXAgrAkri_9B-4">
+          <mxGeometry y="2" width="21.05" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-8" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=quota" vertex="1" parent="boundary">
+          <mxGeometry x="879" y="270" width="21.05" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-9" value="" style="group" vertex="1" connectable="0" parent="boundary">
+          <mxGeometry x="900" y="268" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-6" value="60s" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="VWkAz9IPMXAgrAkri_9B-9">
+          <mxGeometry width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-7" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=deploy" vertex="1" parent="VWkAz9IPMXAgrAkri_9B-9">
+          <mxGeometry y="2" width="21.05" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-10" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=job" vertex="1" parent="boundary">
+          <mxGeometry x="879" y="300" width="21.05" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-11" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=c_role" vertex="1" parent="boundary">
+          <mxGeometry x="900" y="300" width="21.05" height="20" as="geometry" />
+        </mxCell>
         <mxCell id="e1" value="HTTPS" style="endArrow=block;html=1;rounded=0;" parent="1" source="client" target="web" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -120,7 +156,7 @@
         <mxCell id="e9" value="REST/SOAP (fan-out)&#xa;таймауты/ретраи/лимиты" style="endArrow=block;html=1;rounded=0;" parent="1" source="aggregator" target="insurers" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="eOsagoInsurers" value="REST (fan-out)&#xa;Timeout (60s), Retry, Circuit Breaker, Rate Limiting" style="endArrow=block;html=1;rounded=0;" parent="1" source="osagoAgg" target="insurers" edge="1">
+        <mxCell id="eOsagoInsurers" value="REST (fan-out)" style="endArrow=block;html=1;rounded=0;" parent="1" source="osagoAgg" target="insurers" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e10" value="REST (on-demand quotes)&#xa;например ОСАГО" style="endArrow=block;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="core" target="aggregator" edge="1">
@@ -153,6 +189,33 @@
         </mxCell>
         <mxCell id="noteSSE" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;OSAGO UI: REST для старта + SSE для стрима офферов по мере поступления (каждая страховая — отдельное событие).&lt;br&gt;При нескольких репликах core-app: sticky sessions на ingress ИЛИ хранить офферы/статусы в общем хранилище по quoteRequestId.&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;align=left;" parent="1" vertex="1">
           <mxGeometry x="-1150" y="-1540" width="710" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VWkAz9IPMXAgrAkri_9B-20" value="Легенда" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="-1440" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-1" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=deploy" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="16" y="40" width="40" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-2" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=quota" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="68" y="40" width="40" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-3" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=job" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="114" y="40" width="40" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-4" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=c_role" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="164" y="40" width="40" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-7" value="Rate Limiter" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="108" y="78" width="52" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-8" value="Circuit Breaker" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="158" y="78" width="52" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-6" value="Retry" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="62" y="78" width="52" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="sjQkkTkQLkgfXmJFHkoE-5" value="TimeOut" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="VWkAz9IPMXAgrAkri_9B-20" vertex="1">
+          <mxGeometry x="10" y="78" width="52" height="22" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
