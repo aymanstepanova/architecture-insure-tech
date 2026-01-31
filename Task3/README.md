@@ -53,3 +53,4 @@ REST оставляем там, где нужен интерактивный з�
 ## 4) Артефакты
 - Обновлённая диаграмма контейнеров: `Task3/InsureTech_container_to-be.drawio`
 
+![InsureTech_container_to-be.png](InsureTech_container_to-be.png)
